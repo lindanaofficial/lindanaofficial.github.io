@@ -1,0 +1,174 @@
+<title>Linda Na</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Linda Na, master's student at Zhejiang Sci-Tech University working on AI for science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  /* Layout: one narrow left-aligned column; a 4-lane note highway sits under the name as the single flourish. */
+  :root {
+    --bg: #f3f5fa;
+    --surface: #ffffff;
+    --ink: #1b2140;
+    --muted: #5d6482;
+    --line: #dde1ee;
+    --pink: #d93a72;
+    --cyan: #13889a;
+    --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12141f; --surface: #1b1e2d; --ink: #e8eaf4; --muted: #9aa0bd;
+      --line: #2c3046; --pink: #ff6a9e; --cyan: #4fd3e3; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12141f; --surface: #1b1e2d; --ink: #e8eaf4; --muted: #9aa0bd;
+    --line: #2c3046; --pink: #ff6a9e; --cyan: #4fd3e3; color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-block: 64px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    display: grid;
+    gap: 56px;
+  }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Hero */
+  header { display: grid; gap: 14px; }
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(44px, 11vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  h1 .dot { color: var(--pink); }
+  .role { margin: 0; font-size: 19px; color: var(--muted); }
+  .role strong { color: var(--ink); font-weight: 600; }
+
+  /* Sections */
+  section { display: grid; gap: 12px; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0; max-width: 62ch; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+
+  .likes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .like {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    min-width: 0;
+  }
+  .like svg { width: 28px; height: 28px; }
+  .like h3 { margin: 0; font-size: 17px; font-weight: 600; }
+  .like p { color: var(--muted); font-size: 15.5px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 520px) {
+    .page { padding-block: 40px 32px; gap: 44px; }
+    .likes { grid-template-columns: 1fr; }
+  }
+</style>
+
+<main class="page">
+  <header>
+    <h1>Linda Na<span class="dot">.</span></h1>
+    <p class="role">I'm a Master's student at Zhejiang Sci-Tech University, researching AI for science.</p>
+  </header>
+
+  <section>
+    <span class="label">Research</span>
+    <h2>AI for science</h2>
+    <p>I study how machine learning can help answer scientific questions: building models that learn from experimental and simulated data, and using them to speed up discovery in the natural sciences.</p>
+    <div class="tags">
+      <span class="tag">machine learning</span>
+      <span class="tag">scientific data</span>
+      <span class="tag">AI4Science</span>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">Outside the lab</span>
+    <div class="likes">
+      <div class="like">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M5 27V9l6 5h10l6-5v18z" fill="none" stroke="var(--pink)" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="12" cy="19" r="1.6" fill="var(--pink)"/>
+          <circle cx="20" cy="19" r="1.6" fill="var(--pink)"/>
+        </svg>
+        <h3>Cats</h3>
+        <p>Big fan of cats of every size and attitude. Always happy to look at your cat photos.</p>
+      </div>
+      <div class="like">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 6v20M12 6v20M20 6v20M28 6v20" stroke="var(--line)" stroke-width="2"/>
+          <rect x="5.5" y="9" width="5" height="3" rx="1" fill="var(--cyan)"/>
+          <rect x="13.5" y="15" width="5" height="3" rx="1" fill="var(--pink)"/>
+          <rect x="21.5" y="5" width="5" height="3" rx="1" fill="var(--cyan)"/>
+          <path d="M2 22h28" stroke="var(--ink)" stroke-width="2"/>
+        </svg>
+        <h3>Rhythm games</h3>
+        <p>Chasing full combos and better accuracy one chart at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="label">Linda Na</span>
+    <span class="label">Hangzhou, China</span>
+  </footer>
+</main>
